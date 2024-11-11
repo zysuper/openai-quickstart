@@ -62,7 +62,7 @@ if __name__ == "__main__":
     test_recall(vectorstore)
     
     # 加载 prompt
-    prompt = hub.pull("rlm/rag-prompt")
+    prompt = hub.pull("mrparrot/counterfactual-prompt")
     #print(f"prompt: \n{prompt}")
     
     # 创建召回器

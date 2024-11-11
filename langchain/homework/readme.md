@@ -12,6 +12,8 @@
 
 ## 作业实现
 
+使用的离线 QA 文档进行知识库的构建，并测试召回率。
+
 1. LCEL RAG
 
 [跳转到 rag.py 代码实现](./rag.py)
@@ -21,4 +23,8 @@
 
 1. LCEL Multi-chain
 
-[跳转到 multi-chain.py 代码实现](./multi-chain.py)
+[跳转到 code_gen.py 代码实现](./code_gen.py)
+
+![code_gen](./imgs/code_gen.png)
+
+
