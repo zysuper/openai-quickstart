@@ -1,0 +1,277 @@
+❯ python langchain/homework_ch10/case1.py
+
+=== Graph Structure ===
+                                      +-----------+                              
+                                      | __start__ |                              
+                                      +-----------+                              
+                                            *                                    
+                                            *                                    
+                                            *                                    
+                                     +------------+                              
+                                   ..| Researcher |...                           
+                             ......  +------------+   .....                      
+                      .......        ..          ...       .......               
+                ......            ...               .             .....          
+            ....                ..                   ...               .......   
++-----------+                 ..                        ..                  .....
+| call_tool |                 .                           .         ........     
++-----------+...              .                            .........             
+                .....         .                     ........  .                  
+                     ...      .             ........           ...               
+                        ...   .        .....                      .              
+                     +-----------------+                           ..            
+                     | Chart_Generator |                      .....              
+                     +-----------------+                   ...                   
+                                     ..               .....                      
+                                       ..          ...                           
+                                         ..     ...                              
+                                      +---------+                                
+                                      | __end__ |                                
+                                      +---------+                                
+================================ Human Message =================================
+
+Obtain the GDP of the United States from 2000 to 2020, and then plot a line chart with Python. End the task after generating the chart. The recommended search website is https://www.statista.com.
+================================== Ai Message ==================================
+Name: Researcher
+Tool Calls:
+  tavily_search_results_json (call_I12PFEacYEqmjCURC1KjiASB)
+ Call ID: call_I12PFEacYEqmjCURC1KjiASB
+  Args:
+    query: United States GDP from 2000 to 2020 site:statista.com
+================================= Tool Message =================================
+Name: tavily_search_results_json
+
+[{"url": "https://www.statista.com/topics/772/gdp/", "content": "U.S. gross domestic product contributions 2000-2021, by sector\nValue added to gross domestic product across economic sectors in the United States from 2000 to 2021 (as a share of GDP)\nU.S. change in real value added to GDP 2022, by industry\nChange in real value added to the gross domestic product of the United States in 2022, by industry\nU.S. change in value added to real GDP 2012-2022, by industry\nTen year percentage change in value added to the real gross domestic product of the United States between 2012 and 2022, by industry\nU.S. value added to GDP by manufacturing industry 2000-2022\nValue added to the gross domestic product by the manufacturing industry in the United States from 2000 to 2022 (in trillion U.S. dollars)\nTech GDP as a percent of total GDP in the U.S. 2017-2022\nTech sector as a percentage of total gross domestic product (GDP) in the United States from 2017 to 2022\nU.S. digital economy value added to GDP 2021, by industry\nValue added to the total economy (GDP) by the digital economy in the United States in 2021, by industry (in million U.S. dollars)\n U.S. value added to GDP by construction industry 2000-2022\nValue added to gross domestic product by the construction industry in the United States from 2000 to 2022 (in billion U.S. dollars)\nGDP by state\nGDP by state\nU.S. gross domestic product 2022, by state\nGross domestic product of the United States in 2022, by state (in billion current U.S. dollars)\nU.S. real gross domestic product 2022, by state\nReal gross domestic product (GDP) of the United States in 2022, by state (in billion chained 2017 U.S. dollars)\nU.S. real GDP growth 2022, by state\nPercent change in the real gross domestic product of the United States in 2022, by state\nU.S. real GDP of California 2000-2022\nReal gross domestic product of California in the United States from 2000 to 2022 (in billion U.S. dollars)\n U.S. real value added to GDP in Florida, by industry\nReal value added to the gross domestic product of Florida in the United States in 2022, by industry (in billion chained 2017 U.S. dollars)\nGDP by metropolitan area\nGDP by metropolitan area\nU.S. metro areas - ranked by Gross Metropolitan Product (GMP) 2021\nForecasted Gross Metropolitan Product (GMP) of the United States in 2021, by metropolitan area (in billion current U.S. dollars)\nU.S. real GDP 2021, by metro area\nReal gross domestic product of the United States in 2021, by metropolitan area (in million chained 2012 U.S. dollars)\nU.S. real GDP annual percent change 2021, by metro area\nAnnual percent change in the real GDP of the United States in 2021, by metropolitan area\nU.S. real GDP per capita 2021, by metro area\nPer capita real gross domestic product of the United States in 2021, by metropolitan area (in chained 2012 U.S. dollars)\n U.S. gross value added to GDP 2022, by sector\nGross value added to the gross domestic product in the United States from 1990 to 2022, by sector (in billion U.S. dollars)\nU.S. budget balance and forecast as a percentage of GDP 2000-2033\nBudget balance and forecast of the United States government from 2000 to 2033 (as a percentage of GDP)\nGDP by sector and industry\nGDP by sector and industry\nU.S. real value added to GDP 1990-2022, by sector\nReal gross value added to the gross domestic product of the United States from 1990 to 2022, by sector (in billion chained 2017 U.S. dollars)\n The 20 countries with the largest gross domestic product (GDP) per capita in 2022 (in U.S. dollars)\nGDP growth in the leading industrial and emerging countries 2nd quarter 2023\nGrowth of the real gross domestic product (GDP) in the leading industrial and emerging countries from 2nd quarter 2021 to 2nd quarter 2023 (compared to the previous quarter)\nRelated topics\nRecommended\nReport on the topic\nKey figures\nThe most important key figures provide you with a compact summary of the topic of \"GDP of the United States\" and take you straight to the corresponding statistics.\n"}, {"url": "https://www.statista.com/statistics/188165/annual-gdp-growth-of-the-united-states-since-1990/", "content": "Industry Overview\nDigital & Trend reports\nOverview and forecasts on trending topics\nIndustry & Market reports\nIndustry and market insights and forecasts\nCompanies & Products reports\nKey figures and rankings about companies and products\nConsumer & Brand reports\nConsumer and brand insights and preferences in various industries\nPolitics & Society reports\nDetailed information about political and social topics\nCountry & Region reports\nAll key figures about countries and regions\nMarket forecast and expert KPIs for 1000+ markets in 190+ countries & territories\nInsights on consumer attitudes and behavior worldwide\nBusiness information on 100m+ public and private companies\nExplore Company Insights\nDetailed information for 39,000+ online stores and marketplaces\nDirectly accessible data for 170 industries from 150+ countries\nand over 1 Mio. facts.\n Statistics on\n\"\nGDP of the U.S.\n\"\nOther statistics that may interest you GDP of the U.S.\nOverview\nGDP by sector and industry\nGDP by state\nGDP by metropolitan area\nInternational comparison\nFurther related statistics\nFurther Content: You might find this interesting as well\nStatistics\nTopics Countries with highest GDP growth rate\nAnnual growth of the real gross domestic product of the United States from 1990 to 2022\nAdditional Information\nShow sources information\nShow publisher information\nUse Ask Statista Research Service\nJanuary 2023\nUnited States\n1990 to 2022\nOther statistics on the topicGDP of the United States\nEconomy\nU.S. real GDP growth by quarter Q1 2013- Q3 2023\nEconomy\nCountries with the largest gross domestic product (GDP) per capita 2022\nEconomy\nCountries with the largest gross domestic product (GDP) 2022\nEconomy\nU.S. annual GDP 1990-2022\nYou only have access to basic statistics.\n Transforming data into design:\nStatista Content & Design\nStrategy and business building for the data-driven economy:\nU.S. real GDP growth rate 1990-2022\nWhat does GDP growth mean?\n"}, {"url": "https://www.statista.com/statistics/1031678/gdp-and-real-gdp-united-states-1930-2019/", "content": "Industry Overview\nDigital & Trend reports\nOverview and forecasts on trending topics\nIndustry & Market reports\nIndustry and market insights and forecasts\nCompanies & Products reports\nKey figures and rankings about companies and products\nConsumer & Brand reports\nConsumer and brand insights and preferences in various industries\nPolitics & Society reports\nDetailed information about political and social topics\nCountry & Region reports\nAll key figures about countries and regions\nMarket forecast and expert KPIs for 1000+ markets in 190+ countries & territories\nInsights on consumer attitudes and behavior worldwide\nBusiness information on 100m+ public and private companies\nExplore Company Insights\nDetailed information for 39,000+ online stores and marketplaces\nDirectly accessible data for 170 industries from 150+ countries\nand over 1 Mio. facts.\n Transforming data into design:\nStatista Content & Design\nStrategy and business building for the data-driven economy:\nAnnual GDP and real GDP for the United States 1929-2022\nReal GDP\nThe Great Recession\nAnnual Gross Domestic Product and real GDP in the United States from 1929 to 2022\n(in billion U.S dollars)\nAdditional Information\nShow sources information\nShow publisher information\nUse Ask Statista Research Service\nDecember 2023\nUnited States\n1929 to 2022\n*Real GDP - all figures are given in chained FY2017 US dollars.\n Other statistics on the topic\nEconomy\nRPI annual inflation rate UK 2000-2028\nEconomy\nCPI annual inflation rate UK 2000-2028\nEconomy\nAverage annual earnings for full-time employees in the UK 1999-2023\nEconomy\nInflation rate in the UK 1989-2023\nYou only have access to basic statistics.\n Other statistics that may interest you\nOther statistics that may interest you Statistics on\nAbout the industry\nAbout the region\nOther regions\nRelated statistics\nFurther related statistics\nFurther Content: You might find this interesting as well\nStatistics\nTopics Customized Research & Analysis projects:\nGet quick analyses with our professional research service\nThe best of the best: the portal for top lists & rankings:\n"}, {"url": "https://www.statista.com/statistics/188105/annual-gdp-of-the-united-states-since-1990/", "content": "Industry Overview\nDigital & Trend reports\nOverview and forecasts on trending topics\nIndustry & Market reports\nIndustry and market insights and forecasts\nCompanies & Products reports\nKey figures and rankings about companies and products\nConsumer & Brand reports\nConsumer and brand insights and preferences in various industries\nPolitics & Society reports\nDetailed information about political and social topics\nCountry & Region reports\nAll key figures about countries and regions\nMarket forecast and expert KPIs for 1000+ markets in 190+ countries & territories\nInsights on consumer attitudes and behavior worldwide\nBusiness information on 100m+ public and private companies\nExplore Company Insights\nDetailed information for 39,000+ online stores and marketplaces\nDirectly accessible data for 170 industries from 150+ countries\nand over 1 Mio. facts.\n What is GDP?\nGDP and national debt\nGross domestic product of the United States from 1990 to 2022\n(in billion current U.S. dollars )\nAdditional Information\nShow sources information\nShow publisher information\nUse Ask Statista Research Service\nJanuary 2023\nUnited States\n1990 to 2022\nOther statistics on the topicService sector of the U.S.\nEconomy\nU.S. real GDP growth by quarter Q1 2013- Statistics on\n\"\nGDP of the U.S.\n\"\nOther statistics that may interest you GDP of the U.S.\nOverview\nGDP by sector and industry\nGDP by state\nGDP by metropolitan area\nInternational comparison\nFurther related statistics\nFurther Content: You might find this interesting as well\nStatistics\nTopics Q3 2023\nEconomy\nU.S. real GDP growth rate 1990-2022\nEconomy\nCountries with the largest gross domestic product (GDP) per capita 2022\nEconomy\nCountries with the largest gross domestic product (GDP) 2022\n Transforming data into design:\nStatista Content & Design\nStrategy and business building for the data-driven economy:\nU.S. annual GDP 1990-2022\n"}, {"url": "https://www.statista.com/statistics/996758/rea-gdp-growth-united-states-1930-2019/", "content": "Transforming data into design:\nStatista Content & Design\nStrategy and business building for the data-driven economy:\nAnnual GDP growth for the United States 1930-2022\nAnnual growth of real GDP in the United States of America from 1930 to 2022\nAdditional Information\nShow sources information\nShow publisher information\nUse Ask Statista Research Service\nDecember 2023\nUnited States\n1930 to 2022\nOther statistics on the topicThe Great Depression: U.S.\nHistorical Data\nNumber of executive orders signed by U.S. presidents 1789-2024\nHistorical Data\nWinning margins for votes in U.S. presidential elections 1789-2020\nPolitics & Government\nU.S. number of jobs created by sitting president 1933-2022\nFinancial Instruments & Investments\nWorst days in the history of Dow Jones Industrial Average index 1897-2022\nYou only have access to basic statistics.\n Industry Overview\nDigital & Trend reports\nOverview and forecasts on trending topics\nIndustry & Market reports\nIndustry and market insights and forecasts\nCompanies & Products reports\nKey figures and rankings about companies and products\nConsumer & Brand reports\nConsumer and brand insights and preferences in various industries\nPolitics & Society reports\nDetailed information about political and social topics\nCountry & Region reports\nAll key figures about countries and regions\nMarket forecast and expert KPIs for 1000+ markets in 190+ countries & territories\nInsights on consumer attitudes and behavior worldwide\nBusiness information on 100m+ public and private companies\nExplore Company Insights\nDetailed information for 39,000+ online stores and marketplaces\nDirectly accessible data for 170 industries from 150+ countries\nand over 1 Mio. facts.\n Statistics on\n\"\nThe Great Depression\n\"\nOther statistics that may interest you The Great Depression\nNational economics\nStock market\nManufacturing\nAgriculture\nGovernment\nFurther related statistics\nFurther Content: You might find this interesting as well\nStatistics\nTopics Customized Research & Analysis projects:\nGet quick analyses with our professional research service\nThe best of the best: the portal for top lists & rankings:\n Business Solutions including all features.\n"}]
+================================== Ai Message ==================================
+Name: Researcher
+Tool Calls:
+  scraper (call_uXRnAuWmB9rguwbGJMBF1PZL)
+ Call ID: call_uXRnAuWmB9rguwbGJMBF1PZL
+  Args:
+    url: https://www.statista.com/statistics/188165/annual-gdp-growth-of-the-united-states-since-1990/
+================================= Tool Message =================================
+Name: scraper
+
+| Year | Annual rate in percent |
+| --- | --- |
+| '23 | 2.5% |
+| '22 | 1.9% |
+| '21 | 5.8% |
+| '20 | -2.2% |
+| '19 | 2.5% |
+| '18 | 3% |
+| '17 | 2.5% |
+| '16 | 1.8% |
+| '15 | 2.9% |
+| '14 | 2.5% |
+| '13 | 2.1% |
+| '12 | 2.3% |
+| '11 | 1.6% |
+| '10 | 2.7% |
+| '09 | -2.6% |
+| '08 | 0.1% |
+| '07 | 2% |
+| '06 | 2.8% |
+| '05 | 3.5% |
+| '04 | 3.9% |
+| '03 | 2.8% |
+| '02 | 1.7% |
+| '01 | 1% |
+| '00 | 4.1% |
+| '99 | 4.8% |
+| '98 | 4.5% |
+| '97 | 4.4% |
+| '96 | 3.8% |
+| '95 | 2.7% |
+| '94 | 4% |
+| '93 | 2.8% |
+| '92 | 3.5% |
+| '91 | -0.1% |
+| '90 | 1.9% |
+
+
+================================== Ai Message ==================================
+Name: Researcher
+
+I have retrieved the annual GDP growth rates of the United States from 1990 to 2023. Here is the data:
+
+- 2023: 2.5%
+- 2022: 1.9%
+- 2021: 5.8%
+- 2020: -2.2%
+- 2019: 2.5%
+- 2018: 3%
+- 2017: 2.5%
+- 2016: 1.8%
+- 2015: 2.9%
+- 2014: 2.5%
+- 2013: 2.1%
+- 2012: 2.3%
+- 2011: 1.6%
+- 2010: 2.7%
+- 2009: -2.6%
+- 2008: 0.1%
+- 2007: 2%
+- 2006: 2.8%
+- 2005: 3.5%
+- 2004: 3.9%
+- 2003: 2.8%
+- 2002: 1.7%
+- 2001: 1%
+- 2000: 4.1%
+- 1999: 4.8%
+- 1998: 4.5%
+- 1997: 4.4%
+- 1996: 3.8%
+- 1995: 2.7%
+- 1994: 4%
+- 1993: 2.8%
+- 1992: 3.5%
+- 1991: -0.1%
+- 1990: 1.9%
+
+Next, I will proceed to plot a line chart with Python to visualize the GDP growth rates.
+Tool Calls:
+  scraper (call_56qW7hk85nBIlYeeAJVgK44c)
+ Call ID: call_56qW7hk85nBIlYeeAJVgK44c
+  Args:
+    url: https://www.statista.com/statistics/188105/annual-gdp-of-the-united-states-since-1990/
+================================= Tool Message =================================
+Name: scraper
+
+| Year | GDP in billion current U.S. dollars |
+| --- | --- |
+| 2023 | 27,356.4 |
+| 2022 | 25,744.1 |
+| 2021 | 23,594 |
+| 2020 | 21,323 |
+| 2019 | 21,521.4 |
+| 2018 | 20,656.5 |
+| 2017 | 19,612.1 |
+| 2016 | 18,804.9 |
+| 2015 | 18,295 |
+| 2014 | 17,608.1 |
+| 2013 | 16,880.7 |
+| 2012 | 16,254 |
+| 2011 | 15,599.7 |
+| 2010 | 15,049 |
+| 2009 | 14,478.1 |
+| 2008 | 14,769.9 |
+| 2007 | 14,474.2 |
+| 2006 | 13,815.6 |
+| 2005 | 13,039.2 |
+| 2004 | 12,217.2 |
+| 2003 | 11,456.5 |
+| 2002 | 10,929.1 |
+| 2001 | 10,581.9 |
+| 2000 | 10,251 |
+| 1999 | 9,631.2 |
+| 1998 | 9,062.8 |
+| 1997 | 8,577.6 |
+| 1996 | 8,073.1 |
+| 1995 | 7,639.7 |
+| 1994 | 7,287.2 |
+| 1993 | 6,858.6 |
+| 1992 | 6,520.3 |
+| 1991 | 6,158.1 |
+| 1990 | 5,963.1 |
+
+
+================================== Ai Message ==================================
+Name: Researcher
+
+I have also retrieved the annual GDP data of the United States in billion current U.S. dollars from 1990 to 2023. Here is the data:
+
+- 2023: 27,356.4
+- 2022: 25,744.1
+- 2021: 23,594
+- 2020: 21,323
+- 2019: 21,521.4
+- 2018: 20,656.5
+- 2017: 19,612.1
+- 2016: 18,804.9
+- 2015: 18,295
+- 2014: 17,608.1
+- 2013: 16,880.7
+- 2012: 16,254
+- 2011: 15,599.7
+- 2010: 15,049
+- 2009: 14,478.1
+- 2008: 14,769.9
+- 2007: 14,474.2
+- 2006: 13,815.6
+- 2005: 13,039.2
+- 2004: 12,217.2
+- 2003: 11,456.5
+- 2002: 10,929.1
+- 2001: 10,581.9
+- 2000: 10,251
+- 1999: 9,631.2
+- 1998: 9,062.8
+- 1997: 8,577.6
+- 1996: 8,073.1
+- 1995: 7,639.7
+- 1994: 7,287.2
+- 1993: 6,858.6
+- 1992: 6,520.3
+- 1991: 6,158.1
+- 1990: 5,963.1
+
+Now, I will proceed with plotting a line chart to visualize the GDP growth rates and the GDP values from 1990 to 2023.
+Tool Calls:
+  multi_tool_use.parallel (call_AbeC1QAKbrBLVOBGppeLKWnR)
+ Call ID: call_AbeC1QAKbrBLVOBGppeLKWnR
+  Args:
+    tool_uses: [{'recipient_name': 'functions.scraper', 'parameters': {'url': 'https://www.statista.com/statistics/188165/annual-gdp-growth-of-the-united-states-since-1990/'}}, {'recipient_name': 'functions.scraper', 'parameters': {'url': 'https://www.statista.com/statistics/188105/annual-gdp-of-the-united-states-since-1990/'}}]
+================================= Tool Message =================================
+Name: multi_tool_use.parallel
+
+Error: multi_tool_use.parallel is not a valid tool, try one of [tavily_search_results_json, python_repl, scraper].
+Traceback (most recent call last):
+  File "/home/zysuper/workspace2/openai/openai-quickstart/langchain/homework_ch10/case1.py", line 293, in <module>
+    main()
+  File "/home/zysuper/workspace2/openai/openai-quickstart/langchain/homework_ch10/case1.py", line 284, in main
+    result_map = {model_name: run_multi_agent_test(model_factory) for model_name, model_factory in models.items()}
+  File "/home/zysuper/workspace2/openai/openai-quickstart/langchain/homework_ch10/case1.py", line 284, in <dictcomp>
+    result_map = {model_name: run_multi_agent_test(model_factory) for model_name, model_factory in models.items()}
+  File "/home/zysuper/workspace2/openai/openai-quickstart/langchain/homework_ch10/case1.py", line 264, in run_multi_agent_test
+    for event in events:
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langgraph/pregel/__init__.py", line 1646, in stream
+    for _ in runner.tick(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langgraph/pregel/runner.py", line 104, in tick
+    run_with_retry(t, retry_policy, writer=writer)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langgraph/pregel/retry.py", line 40, in run_with_retry
+    task.proc.invoke(task.input, config)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langgraph/utils/runnable.py", line 410, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langgraph/utils/runnable.py", line 184, in invoke
+    ret = context.run(self.func, input, **kwargs)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/langchain/homework_ch10/case1.py", line 113, in agent_node
+    result = agent.invoke(state)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 2879, in invoke
+    input = context.run(step.invoke, input, config)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 5093, in invoke
+    return self.bound.invoke(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 277, in invoke
+    self.generate_prompt(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 777, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 634, in generate
+    raise e
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 624, in generate
+    self._generate_with_cache(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py", line 846, in _generate_with_cache
+    result = self._generate(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/langchain_openai/chat_models/base.py", line 543, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/openai/_utils/_utils.py", line 277, in wrapper
+    return func(*args, **kwargs)
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 590, in create
+    return self._post(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/openai/_base_client.py", line 1240, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/openai/_base_client.py", line 921, in request
+    return self._request(
+  File "/home/zysuper/workspace2/openai/openai-quickstart/.conda/lib/python3.10/site-packages/openai/_base_client.py", line 1020, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid 'messages[8].tool_calls[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.", 'type': 'invalid_request_error', 'param': 'messages[8].tool_calls[0].function.name', 'code': 'invalid_value'}}

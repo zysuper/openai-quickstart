@@ -1,5 +1,6 @@
 langchain
 langchain-openai
+langchain-ollama
 langchain-core
 langchain-community
 langchain-experimental
