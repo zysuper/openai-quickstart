@@ -11,7 +11,14 @@
 2. 优化了 reflect 的 prompt， 让其只对当前轮的写作内容，给出反馈。
 3. 优化了 reflect 的 prompt， 让其作为内容审核者角色，给出反馈。
 
+## demo 演示
+
+贪吃蛇代码生成：
+
 ![image](./code.gif)
+
+南游记慧能大师传法故事生成：
+
 ![image](./doc.gif)
 
 [实现代码 <-- 点击这里](./writer_and_reflect_agent.py)
