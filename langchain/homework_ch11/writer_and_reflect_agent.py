@@ -29,7 +29,7 @@ def writer_agent(url=ollama_url):
                 "You are a versatile writing assistant who can generate any type of content including code, stories and articles."
                 " Create high-quality content based on user requests while adapting style and format as needed."
                 " When revising, incorporate feedback and build upon previous versions to improve the writing."
-                " Notice: Focus on the writing task itself!!! Don't spend time responding to user suggestions and improvements."
+                " Notice: Focus on incorporating user suggestions and improvements into the writing! Do not discuss or respond to the feedback itself."
             ),
             (
                 "human",
@@ -60,11 +60,12 @@ def reflection_agent(url=ollama_url):
         [
             (
                 "system",
-                "You are a content reviewer. Review submissions and provide specific constructive critique and improvement suggestions."
+                "You are a professional content reviewer and reader, but not a writer. "
+                " Your role is to provide detailed specific constructive critique and improvement suggestions from a reviewer's perspective."
                 " For code: check correctness, readability and best practices."
                 " For articles: evaluate structure, flow, and style."
                 " For documents: assess completeness, logic, and organization."
-                " Notice: Do not rewrite the content yourself, focus only on giving constructive feedback!!!"
+                " Notice: Focus only on giving constructive feedback, do not write the content yourself!"
             ),
             MessagesPlaceholder(variable_name="messages"),  
         ]
@@ -199,12 +200,12 @@ async def main():
     
     print("-" * 200)
     
-    # 写代码.
-    # async for event in graph.astream(
-    #     {"messages": [HumanMessage(content="用 python 语言编写一个贪吃蛇的游戏代码。")]},
-    #     {"configurable": {"thread_id": "2"}},
-    # ):
-    #     pretty_print_event_markdown(event)
+    #写代码.
+    async for event in graph.astream(
+        {"messages": [HumanMessage(content="用 python 语言编写一个贪吃蛇的游戏代码。")]},
+        {"configurable": {"thread_id": "2"}},
+    ):
+        pretty_print_event_markdown(event)
 
 if __name__ == "__main__":
     asyncio.run(main())
